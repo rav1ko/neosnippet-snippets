@@ -27,7 +27,13 @@ abbr        for () {}
     for (${1} = 0; $1 < ${2}; $1++) {
         ${0:TARGET}
     }
-
+    
+snippet     fori
+abbr        for () {}
+    for (int ${1} = 0; $1 < ${2}; $1++) {
+        ${0:TARGET}
+    }
+    
 snippet     while
 abbr        while () {}
     while (${1:#:condition}) {
@@ -75,8 +81,7 @@ abbr        enum {}
 
 # hard-tab is necessary; C indent doesn't support this.
 snippet main
-	int main(int argc, char const* argv[])
-	{
+	int main(int argc, char const* argv[]) {
 		${0:TARGET}
 		return 0;
 	}
@@ -136,8 +141,7 @@ alias size
 
 snippet helloworld
     #include <stdio.h>
-    int main(int argc, char const* argv[])
-    {
+    int main(int argc, char const* argv[]) {
         puts("hello, world!");
         return 0;
     }
